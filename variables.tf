@@ -11,7 +11,7 @@ variable "aws_account_id" {
 }
 
 variable "source_bucket" {
-  description = "Amazon S3 Source Bucket, where the transition will be done"
+  description = "Name of the Amazon S3 Source Bucket"
   type        = string
   default     = "gilad-optimizer-test-files-bucket"
 }
