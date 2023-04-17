@@ -1,20 +1,15 @@
 variable "region" {
-    description = "Region"
+    description = "AWS Region"
     type = string
 }
 
-variable "destination_bucket" {
-    description = "Destination bucket to send inventory and access logs to"
-    type        = string
-}
-
 variable "source_bucket" {
-    description = "Source bucket to optimize"
+    description = "Name of the Amazon S3 Source Bucket"
     type        = string
 }
 
 variable "source_bucket_arn" {
-    description = "Source bucket ARN"
+    description = "ARN of the Amazon S3 Source Bucket"
     type        = string 
 }
 
@@ -24,49 +19,48 @@ variable "aws_account_id" {
 }
 
 variable "modify_days" {
-  description = "Modify days"
+  description = "Arbitrary value for condition regarding modifying the object"
   type        = string
 }
 
 variable "access_days" {
-  description = "Access days"
+  description = "Arbitrary value for condition regarding accessing the object"
   type        = string
 }
 
 variable "lambda_function_name" {
-    description = "lambda function name"
+    description = "Name of the lambda function"
     type        = string
 }
 
 variable "account_id" {
-    description = "Account ID"
-    
+    description = "Account ID"  
 }
 
 variable "athena_database_name" {
-    description = "Name of the database"
+    description = "Name of the athena database"
     type        = string
 }
 
 
 variable "athena_table_name" {
-    description = "Name of the table"
+    description = "Name of the athena table"
     type        = string
 }
 
 variable "cloudwatch_rule_name" {
-    description = "Name of the table"
+    description = "Name of the cloudwatch rule"
     type        = string
 }
 
 variable "cloudwatch_rule_description" {
-    description = "Name of the table"
+    description = "Description of the cloudwatch rule"
     type        = string
 }
 
 
 variable "cloudwatch_rule_schedule_expression" {
-    description = "Name of the table"
+    description = "Frequency of running the lambda function"
     type        = string
 }
 
@@ -76,7 +70,7 @@ variable "log_bucket_name" {
 }
 
 variable "target_prefix" {
-    description = "A prefix for all log object keys"
+    description = "Prefix for all log object keys"
     type        = string
 }
 
@@ -86,12 +80,12 @@ variable "athena_queries_destination" {
 }
 
 variable "key" {
-    description = "Key for tagging"
+    description = "Key for tagging the object"
     type        = string
 }
 
 variable "value" {
-    description = "Value for tagging"
+    description = "Value for tagging the object"
     type        = string
 }
 
