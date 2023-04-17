@@ -1,34 +1,34 @@
 variable "source_bucket" {
-    description = "Source bucket to optimize"
+    description = "Name of the Amazon S3 Source Bucket"
     type        = string
 }
 
 variable "source_bucket_id" {
-    description = "Source bucket ID"
+    description = "ID of the Amazon S3 Source Bucket"
     type        = string 
 }
 
 variable "target_prefix" {
-    description = "A prefix for all log object keys"
+    description = "Prefix for all log object keys"
     type        = string
 }
 
 variable "log_bucket_name" {
-    description = "A prefix for all log object keys"
+    description = "Name of the bucket for server access logs"
     type        = string
 }
 
 variable "log_bucket_acl" {
-    description = "A prefix for all log object keys"
+    description = "S3 Bucket ACL resource"
     type        = string
 }
 
 variable "key" {
-    description = "Key for tagging"
+    description = "Key for tagging the object"
     type        = string
 }
 
 variable "value" {
-    description = "Value for tagging"
+    description = "Value for tagging the object"
     type        = string
 }
